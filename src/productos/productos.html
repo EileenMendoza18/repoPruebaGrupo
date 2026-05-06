@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Productos</title>
+    <link rel="stylesheet" href="productos.css">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navegacion">
+        <a href="../categorias/categorias.html" class="navegacion__volver">
+            <button type="button" class="btt__navegacion--volver">
+                <i class="bx bx-arrow-left-stroke"></i>
+            </button>
+        </a>
+    </nav>
+
+    <main class="contenedor">
+
+        <h1 class="contenedor__titulo">CARGANDO PRODUCTOS...</h1>
+
+        <p class="contenedor__contexto"></p>
+
+        <section class="contenedor__tarjetas">
+            <button type="button" class="contenedor__button--crear btn">Crear producto</button>
+        </section>
+
+        <div class="modal-overlay form__oculto">
+            <form onsubmit="return false" class="form">
+                <div class="form__header">
+                    <h2 class="form__titulo">INFORMACIÓN DEL PRODUCTO</h2>
+                    <button type="button" class="form__close" id="closeForm">X</button>
+                </div>
+
+                <div class="form__campos">
+                    <label for="nombre" class="form__label" id="labelNombre">Nombre del producto:</label>
+                    <input type="text" id="nombre" class="form__input" placeholder="Ej. Monitor Gamer">
+                </div>
+
+                <div class="form__campos">
+                    <label for="desc" class="form__label">Descripción:</label>
+                    <textarea id="desc" class="form__input" rows="3"></textarea>
+                </div>
+
+                <div class="form__campos">
+                    <label for="url" class="form__label">Enlace de la imagen:</label>
+                    <input type="text" id="url" class="form__input" placeholder="http://...">
+                </div>
+
+                <button type="submit" class="btn btn--guardar">Guardar cambios</button>
+            </form>
+        </div>
+    </main>
+
+    <script type="module" src="productos.js"></script>
+</body>
+</html>
